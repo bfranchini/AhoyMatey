@@ -12,7 +12,14 @@ namespace Assets.Players
         void Start () {
 		
         }
-	
+
+        public override void OnStartLocalPlayer()
+        {
+            var localCamera = GetComponentInChildren<Camera>();
+            localCamera.enabled = true;
+        }
+        
+
         // Update is called once per frame
         void Update ()
         {
